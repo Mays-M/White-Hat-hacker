@@ -40,6 +40,7 @@ according to log.
 important purposes, each with its own impact.
 
 **Steps to produce:**
+
 1. Navigate to http://wasdat.fi.
 2. On the console :
 • Ssh wasdat.fi@192.168.1.101: ssh connection the docker.
@@ -56,9 +57,11 @@ FLAG{was_1_2_3_5_taken}
 **Impact estimation:**
 – Medium Severity: logs files can be a tool to the attackers to use to find sensitive
 information about the application or user credential information.
+
 **Mitigation:**
 - by implementing a security measure such encryption and permissions, you can help
 protect log files from hacking attempts and maintain the integrity and confidentiality of
 log data. It's important to regularly assess and update your log file security practices to
 adapt to evolving threats and vulnerabilities.
+
 **Visit** https://stackoverflow.com/questions/19256919/location-of-django-logs-and-errors
