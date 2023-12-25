@@ -52,7 +52,7 @@ the file ‘settings.py’
 and stopped so maybe if I tried John6 I can successfully login while I have the correct
 password. ![LogFile](https://github.com/Mays-M/Images-/blob/main/logFile.png)
 5. Successfully guessed information from the extracted log and login with John6: john88
-FLAG{was_1_2_3_5_taken}
+FLAG{was_1_2_3_5_taken} ![Flag](https://github.com/Mays-M/Images-/blob/main/flag.png)
 
 **Impact estimation:**
 – Medium Severity: logs files can be a tool to the attackers to use to find sensitive
