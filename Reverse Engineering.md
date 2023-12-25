@@ -21,12 +21,15 @@ the user input.
 at a particular address. Reverse assembly is often used in debugging and
 reverse engineering to understand the low-level details of a program or
 binary executable.
-
+![Main Function](https://github.com/Mays-M/Images-/blob/main/mainFunction.png)
+![Main Function](https://github.com/Mays-M/Images-/blob/main/mainFunction2.png)
 ### Check serial function
 
 The begin of this function start with set of codes to check the length of a string as
 user input, it is obtained from the function argument =19 characters, and if True
 jump to location in the memory call loc_804920A for further instructions.
+![checkserialfunction](https://github.com/Mays-M/Images-/blob/main/checkserialfunction.png)
+
 After checking the condition, the function starts to set the serial instructions and
 from the construction of the flow of the code we found:
 
