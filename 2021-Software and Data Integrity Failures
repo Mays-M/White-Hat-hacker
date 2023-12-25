@@ -1,16 +1,12 @@
-Web Application Security
-Student number: AB0168
-Name: Mays Al-Azzawi
-Group: TIC21S
-Time management: Approximately 9 hours
-Week 10
-Server-side Request Forgery:
-Old wasdat – XML external entity SSRF version
-Title: Launch missiles through old Wasdat with SSRF flaw in the backend.
-Description: This vulnerability combines XXE with SSRF. SSRF is a type of attack where an
+# Web Application Security
+ 
+## Server-side Request Forgery:
+### Old wasdat – XML external entity SSRF version
+** Title: Launch missiles through old Wasdat with SSRF flaw in the backend.
+** Description: This vulnerability combines XXE with SSRF. SSRF is a type of attack where an
 attacker can make a server perform requests on their behalf, potentially bypassing security
 controls and accessing resources that should be restricted.
-Steps to produce:
+** Steps to produce:
 1. Navigate to http://wasdat.fi:8080.
 2. Edit oldwasdat-exampe.xml- MALICIOUS XML document and include an external entity
 declaration pointing to a resource that want to access, in this case want to access
