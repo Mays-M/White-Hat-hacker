@@ -58,10 +58,9 @@ FLAG{was_1_2_3_5_taken}
 – Medium Severity: logs files can be a tool to the attackers to use to find sensitive
 information about the application or user credential information.
 
-**Mitigation:**
-- by implementing a security measure such encryption and permissions, you can help
+**Mitigation:** by implementing a security measure such encryption and permissions, you can help
 protect log files from hacking attempts and maintain the integrity and confidentiality of
 log data. It's important to regularly assess and update your log file security practices to
 adapt to evolving threats and vulnerabilities.
 
-**Visit** https://stackoverflow.com/questions/19256919/location-of-django-logs-and-errors
+**Visit: ** https://stackoverflow.com/questions/19256919/location-of-django-logs-and-errors
