@@ -11,7 +11,6 @@ accepts untrusted input that could redirect the request to URL.
 
 1. Navigate to https://wasdat.fi/3000.
 2. Right click to navigate to Inspect code of the website.
-  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
 4. On the Debugger, there is a file called main.js.
 5. CTRL +F, type ‘redirect’ from this we can file list of redirect URL and to try to navigate to it.
 6. So it seems from the URL found it is http://wasdata.fi:3000/redirect?to= and then the
@@ -41,7 +40,7 @@ application, putting its security in jeopardy and endangering sensitive data.
 
 **Steps to produce:**
 1. Navigate to http://wasdat.fi/api/import.
-2. Test it by send “data=c2xlcCAxMAo=” to get 500 Internal Server Error
+2. Test it by send “data=c2xlcCAxMAo=” to get 500 Internal Server Error  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
 3. Create reverse shell using Pickle Deserialization in python.
 4. Run the script to print pickled data.
 5.  Send Post request to Api/import with the data value.
