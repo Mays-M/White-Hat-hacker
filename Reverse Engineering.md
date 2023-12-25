@@ -2,19 +2,21 @@
 
 ## Main function of the program
 
-""The code begins with the standard preamble. This sets up the stack frame and
-allocates memory for local variables. The string "serial key: " is printed to
-prompt the user for input. Input is read using scanf with “%s” as an argument. It
-is stored in a buffer as a string. This is passed to the check_serial function for
-validation.The result is checked.""
+The code begins with the standard preamble. This sets up the stack frame and allocates memory for local variables. The string "serial key: " is printed to prompt the user for input. Input is read using scanf with “%s” as an argument. It is stored in a buffer as a string. This is passed to the check_serial function for validation.The result is checked.
 
 • _time: This function to retrieving the current time.
+
 • _stand: to initialize the serial key number.
+
 • _memset: to initial a block of memory [var_17] set to zero.
+
 • _printf: to print the string “Insert serial key” to the console, prompting
 the user input.
+
 • ___isoc99_scanf: it is readying user input and check if it is string.
+
 • Check_serial: to check the user input validation.
+
 • word ptr: it means the following operand is a 16-bit value located in memory
 at a particular address. Reverse assembly is often used in debugging and
 reverse engineering to understand the low-level details of a program or
@@ -22,7 +24,7 @@ binary executable.
 
 ### Check serial function
 
-""The begin of this function start with set of codes to check the length of a string as
+The begin of this function start with set of codes to check the length of a string as
 user input, it is obtained from the function argument =19 characters, and if True
 jump to location in the memory call loc_804920A for further instructions.
 After checking the condition, the function starts to set the serial instructions and
@@ -50,6 +52,7 @@ argument with ‘and’ which are 400h and 800h
 800h=0000 1000 000 0000
 From this point I started to digging to know what the actual job of the function is
 __ctype_b_loc and I found that this function:
+
 • The __ctype_b_loc() function shall return a pointer into an array of characters
 in the current locale that contains characteristics for each character in the
 current character set.
