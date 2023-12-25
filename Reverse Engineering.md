@@ -66,17 +66,17 @@ movsx ecx, byte ptr [ecx+5]
 From this point I started to digging to know what the actual job of the function is
 **__ctype_b_loc** and I found that this function:
 
-• The __ctype_b_loc() function shall return a pointer into an array of characters
-in the current locale that contains characteristics for each character in the
-current character set.
+• The __ctype_b_loc() function shall return a pointer into an array of characters in the current locale that contains characteristics for each character in the current character set.
 
-Now to apply this on the two hexa number we had in our program, we found
-it is return number on 800h and alphabets on 400h.
-In this point we still missing the arrange of the set of the key and from our
-code, I followed the use of 400h and 800h found it is return a set like this:
+![arrguments](https://github.com/Mays-M/Images-/blob/main/arrguments.png)  
 
+Now to apply this on the two hexa number we had in our program, we found it is return number on 800h and alphabets on 400h.
+![arrguments](https://github.com/Mays-M/Images-/blob/main/excel.png) 
 
-NAAN-NNAA-AANN-NNNA
+In this point we still missing the arrange of the set of the key and from our code, I followed the use of 400h and 800h found it is return a set like this:
+ 
+ NAAN-NNAA-AANN-NNNA
+
 *’N ‘presents 800h which is a Number and ‘A ‘presents 400h which is a letter.
 
 ## The Result
