@@ -41,13 +41,13 @@ application, putting its security in jeopardy and endangering sensitive data.
 **Steps to produce:**
 1. Navigate to http://wasdat.fi/api/import.
 2. Test it by send “data=c2xlcCAxMAo=” to get 500 Internal Server Error  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
-3. Create reverse shell using Pickle Deserialization in python.
+3. Create reverse shell using Pickle Deserialization in python.![Pickle](https://github.com/Mays-M/Images-/blob/main/pickle.png)
 4. Run the script to print pickled data.
-5.  Send Post request to Api/import with the data value.
+5.  Send Post request to Api/import with the data value.![POST](https://github.com/Mays-M/Images-/blob/main/POST.png)
 6.  Run netcat (nc) utility. It is a command used for network communication and
 is commonly used to create a listening socket on a specific port for various purposes,
 including network debugging and data transfer.
-
+![netcat](https://github.com/Mays-M/Images-/blob/main/netcat.png)
 **Impact estimation:** Medium SeverityAttacker can access to the server and read data shouldn’t be visible
 to the user.
 
