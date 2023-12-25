@@ -11,12 +11,13 @@ accepts untrusted input that could redirect the request to URL.
 
 1. Navigate to https://wasdat.fi/3000.
 2. Right click to navigate to Inspect code of the website.
-3. On the Debugger, there is a file called main.js.
-4. CTRL +F, type ‘redirect’ from this we can file list of redirect URL and to try to navigate to it.
-5. So it seems from the URL found it is http://wasdata.fi:3000/redirect?to= and then the
+  ![Testing]()
+4. On the Debugger, there is a file called main.js.
+5. CTRL +F, type ‘redirect’ from this we can file list of redirect URL and to try to navigate to it.
+6. So it seems from the URL found it is http://wasdata.fi:3000/redirect?to= and then the
 website we want to navigate, but it isn’t work directly
 http://wasdata.fi:3000/redirect?to=google.com : received 406 error.
-6. To successfully pass the websites, you need to redirect the URL to navigate like in the
+7. To successfully pass the websites, you need to redirect the URL to navigate like in the
 example.
  google.com.
 
