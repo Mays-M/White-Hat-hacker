@@ -50,7 +50,7 @@ important purposes, each with its own impact.
 the file ‘settings.py’
 4. From the log error file, I assumed if the user tried to login with username: John to John5
 and stopped so maybe if I tried John6 I can successfully login while I have the correct
-password.
+password. ![LogFile](https://github.com/Mays-M/Images-/blob/main/logFile.png)
 5. Successfully guessed information from the extracted log and login with John6: john88
 FLAG{was_1_2_3_5_taken}
 
