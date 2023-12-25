@@ -11,7 +11,7 @@ accepts untrusted input that could redirect the request to URL.
 
 1. Navigate to https://wasdat.fi/3000.
 2. Right click to navigate to Inspect code of the website.
-  ![Testing]()
+  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
 4. On the Debugger, there is a file called main.js.
 5. CTRL +F, type ‘redirect’ from this we can file list of redirect URL and to try to navigate to it.
 6. So it seems from the URL found it is http://wasdata.fi:3000/redirect?to= and then the
