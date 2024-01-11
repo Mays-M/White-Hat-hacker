@@ -26,3 +26,33 @@ On Linux create a python code which will do the will open a zip file and try dif
 - The correct password was 'topsecret1’. Proceed with further actions.
 
 ![Python code ](https://github.com/Mays-M/Images-/blob/main/ch02_op1.png)
+
+At this point after we knew the correct password will Unzip file type the content
+of hi.txt by:
+- Unzip hi.zip
+- cat hi.txt
+- will print a text seems to be encrypted: ZmxhZ3ttQlVMUFh5M1pkS1lhTnd9
+- Navigate https://cyberChef.com to encode base64.
+- Found the flag: flag{mBULPXy3ZdKYaNw}
+
+![Encrypt  ](https://github.com/Mays-M/Images-/blob/main/ch02_flag.png)
+
+
+## Option2 Brup.xml
+Steps:
+1. Download xml file and navigate to burp.xml
+2. First notice the request and response are encrypted base64.
+3. Navigate https://gchq.github.io/CyberChef/
+4. Copy paste the request and decode from base64
+- Request encrypted base64
+- Resqust decrypted from base64
+- Nothing interesting
+5. Repeat Copy paste the Response and decode from base64.
+- Response encrypted base64
+- Responsedecrypted from base64
+- In the response it return 200k successful and I started to digging to the code and soon I noticed there is encrypted link with a rel=flag which I
+copied and base it to decoded base 64 and flage found: flag{sLpufQN9MK9x7Cb}
+
+![oprtion 2 ](https://github.com/Mays-M/Images-/blob/main/ch02_op3.png)
+
+![oprtion 2 ](https://github.com/Mays-M/Images-/blob/main/ch02_op3_flag.png)
