@@ -219,7 +219,7 @@ Set lhost 198.18.103.134
 
 13. Enter the shell
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+![shell](https://github.com/Mays-M/Images-/blob/main/shell.png)
 
 14. Flag successfully found inside text file called flag on jeff’s desktop after
 directed to desktop path and typed, thendecoded the content.
