@@ -119,3 +119,15 @@ decoding it using the base64 algorithm.
 ![Flag 4 ](https://github.com/Mays-M/Images-/blob/main/flag4.png)
 
 # CH05
+
+Steps:
+
+1. I obtained two files from this challenge, one containing only email data and
+the other being a package file.
+2. In Kali, I opened the "email.pcap" file using the Wireshark program to analyze the package.
+3. Within the package, I right-clicked and selected "Follow" and then "TCP package."
+4. During the investigation, I identified an encrypted file named "computerUpdate.exe."
+5. copied the contents of the file and visited https://gchq.github.io/CyberChef/
+for decypte the contents.
+6. Utilizing the base64 option on CyberChef, I decoded the content and
+discovered text containing the flag.Flag found successfully: flag{5str1ng}
