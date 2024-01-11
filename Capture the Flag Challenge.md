@@ -91,7 +91,7 @@ function doGravity(g=-1, f1=atob, f2=btoa) {
 
     ![Notes ](https://github.com/Mays-M/Images-/blob/main/notes.png)
     
- 7. Flag successfully found from choice (myId + myGamePiece.gravStr + 'EZWRExkOHI2REN9) by decode base64: flag{jKX4DFVDLd8r6DC}
+ 6. Flag successfully found from choice (myId + myGamePiece.gravStr + 'EZWRExkOHI2REN9) by decode base64: flag{jKX4DFVDLd8r6DC}
 
       ![Notes ](https://github.com/Mays-M/Images-/blob/main/flag3.png)
 
@@ -105,16 +105,14 @@ Steps:
 
 ![Anaylsis Packet ](https://github.com/Mays-M/Images-/blob/main/analysis_packet.png)
    
-5. Upon receiving a 200k response, two links related to the given URL immediately caught my attention.
-6. Investigate the first URL, but unfortunately, no noteworthy information is discovered
-7. Shift focus to the second URL, http://challenger.vle.fi/wpjson/wp/v2/pages/13, where the word "hidden" is identified along with encrypted data.
+4. Upon receiving a 200k response, two links related to the given URL immediately caught my attention.
+5. Investigate the first URL, but unfortunately, no noteworthy information is discovered
+6. Shift focus to the second URL, http://challenger.vle.fi/wpjson/wp/v2/pages/13, where the word "hidden" is identified along with encrypted data.
 
 ![Path ](https://github.com/Mays-M/Images-/blob/main/path1.png)
    
-8. Proceed to https://gchq.github.io/CyberChef/ and input the data
-extracted from http://challenger.vle.fi/wp-json/wp/v2/pages/13,
-decoding it using the base64 algorithm.
-9. Flag successfully found: flag{7pzcgyRF9r8wZJp}
+7. Proceed to https://gchq.github.io/CyberChef/ and input the data extracted from http://challenger.vle.fi/wp-json/wp/v2/pages/13, decoding it using the base64 algorithm.
+8. Flag successfully found: flag{7pzcgyRF9r8wZJp}
 
 ![Flag 4 ](https://github.com/Mays-M/Images-/blob/main/flag4.png)
 
@@ -126,8 +124,16 @@ Steps:
 the other being a package file.
 2. In Kali, I opened the "email.pcap" file using the Wireshark program to analyze the package.
 3. Within the package, I right-clicked and selected "Follow" and then "TCP package."
-4. During the investigation, I identified an encrypted file named "computerUpdate.exe."
-5. copied the contents of the file and visited https://gchq.github.io/CyberChef/
-for decypte the contents.
+
+![packet](https://github.com/Mays-M/Images-/blob/main/packet.png)
+
+4. During the investigation, I identified an encrypted file named "computerUpdate.exe." 
+
+![wireshark](https://github.com/Mays-M/Images-/blob/main/wireshark.png)
+
+5. copied the contents of the file and visited https://gchq.github.io/CyberChef/ for decypte the contents.
 6. Utilizing the base64 option on CyberChef, I decoded the content and
 discovered text containing the flag.Flag found successfully: flag{5str1ng}
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
