@@ -226,6 +226,6 @@ directed to desktop path and typed, thendecoded the content.
 flag{HlXN50rE4VbPLJD}
 
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+![text](https://github.com/Mays-M/Images-/blob/main/text.png)
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+![flag 6](https://github.com/Mays-M/Images-/blob/main/flag6.png)
