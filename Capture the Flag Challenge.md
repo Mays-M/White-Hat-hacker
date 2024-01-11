@@ -156,21 +156,13 @@ http://challenger.vle.fi/contact-us/ and submit a comment like shows in the figu
 Run sqlmap designed for automated detection and exploitation of SQL
 injection vulnerabilities in web applications, an explanation of the
 command:
-o sqlmap: This is the name of the tool being used.
-o -u challenger.vle.fi/wp-admin/admin-ajax.php: This
+
+- sqlmap: This is the name of the tool being used.
+- -u challenger.vle.fi/wp-admin/admin-ajax.php: This
 option specifies the target URL where the SQL injection
 vulnerability is suspected. In this case, it's pointing to the
 "admin-ajax.php" file in the "wp-admin" directory of the
 "challenger.vle.fi" website.
-o --data "action=rk_action&fdata=rk_email%3Dtest%2540yahoo.co
-m%26rk_subject%3Dtest%26rk_comment%3D%26submi
-t%3D&msg=": This option is used to provide the data
-Figure 18 Brup suite capture a POST request
-16
-that will be sent to the web application as part of the
-request. It seems to be simulating a form submission
-with various parameters. The %3D and %2540 are URLencoded representations of '=' and '@', respectively.
-o --tables: This option instructs sqlmap to enumerate the
-database tables once the SQL injection vulnerability is
-o identified. It attempts to gather information about the
-database structure.
+- --data "action=rk_action&fdata=rk_email%3Dtest%2540yahoo.com%26rk_subject%3Dtest%26rk_comment%3D%26submit%3D&msg=": This option is used to provide the data that will be sent to the web application as part of the request. It seems to be simulating a form submission with various parameters. The %3D and %2540 are URLencoded representations of '=' and '@', respectively.
+- --tables: This option instructs sqlmap to enumerate the database tables once the SQL injection vulnerability is
+-  identified. It attempts to gather information about the database structure.
