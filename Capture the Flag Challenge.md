@@ -17,7 +17,7 @@ exceptions and prints an error message
 
 # CH02
 
-## Opition1 hi.zip
+### Opition1 hi.zip
 
 On Linux create a python code which will do the will open a zip file and try different password after fetch them from a popular password published by the hackers around the world saved in a list called ‘rockyou.txt’ :
 - Unzip file ‘hi.zip’
@@ -38,7 +38,7 @@ of hi.txt by:
 ![Encrypt  ](https://github.com/Mays-M/Images-/blob/main/ch02_flag.png)
 
 
-## Option2 Brup.xml
+### Option2 Brup.xml
 Steps:
 1. Download xml file and navigate to burp.xml
 2. First notice the request and response are encrypted base64.
@@ -57,14 +57,14 @@ copied and base it to decoded base 64 and flage found: flag{sLpufQN9MK9x7Cb}
 
 ![oprtion 2 ](https://github.com/Mays-M/Images-/blob/main/ch02_op3_flag.png)
 
-## flag CH02
+### flag CH02
 - Convert both option 1 and 2 with "flag 1" and "flag 2" to binary.
 - Apply the XOR operation.
 - Convert the result to hexadecimal.
 - The discovered flag is:
 00000000001E0E25393609370A172F7221560D1500
 
-  # CH03 Flappy.html
+# CH03 Flappy.html
   Steps:
 1. Open the "flappy.html" file.
 2. Right-click and select "Inspect" to examine the code.
@@ -95,3 +95,21 @@ function doGravity(g=-1, f1=atob, f2=btoa) {
 
       ![Notes ](https://github.com/Mays-M/Images-/blob/main/flag3.png)
 
+# CH04
+
+Steps:
+
+1. Visit http://challenger.vle.fi/.
+2. Inspect the website and its source code, but no significant findings were
+observed.
+3. Utilize Burp Suite to access the specified URL and send a request.
+4. Upon receiving a 200k response, two links related to the given URL immediately caught my attention.
+5. Investigate the first URL, but unfortunately, no noteworthy information is discovered
+6. Shift focus to the second URL, http://challenger.vle.fi/wpjson/wp/v2/pages/13, where the word "hidden" is identified along with encrypted data.
+7. Proceed to https://gchq.github.io/CyberChef/ and input the data
+extracted from http://challenger.vle.fi/wp-json/wp/v2/pages/13,
+decoding it using the base64 algorithm.
+8. Flag successfully found: flag{7pzcgyRF9r8wZJp}
+![Flag 4 ](https://github.com/Mays-M/Images-/blob/main/flag4.png)
+
+# CH05
