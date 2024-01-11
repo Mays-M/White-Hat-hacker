@@ -100,16 +100,22 @@ function doGravity(g=-1, f1=atob, f2=btoa) {
 Steps:
 
 1. Visit http://challenger.vle.fi/.
-2. Inspect the website and its source code, but no significant findings were
-observed.
+2. Inspect the website and its source code, but no significant findings were observed.
 3. Utilize Burp Suite to access the specified URL and send a request.
-4. Upon receiving a 200k response, two links related to the given URL immediately caught my attention.
-5. Investigate the first URL, but unfortunately, no noteworthy information is discovered
-6. Shift focus to the second URL, http://challenger.vle.fi/wpjson/wp/v2/pages/13, where the word "hidden" is identified along with encrypted data.
-7. Proceed to https://gchq.github.io/CyberChef/ and input the data
+
+![Anaylsis Packet ](https://github.com/Mays-M/Images-/blob/main/analysis_packet.png)
+   
+5. Upon receiving a 200k response, two links related to the given URL immediately caught my attention.
+6. Investigate the first URL, but unfortunately, no noteworthy information is discovered
+7. Shift focus to the second URL, http://challenger.vle.fi/wpjson/wp/v2/pages/13, where the word "hidden" is identified along with encrypted data.
+
+![Path ](https://github.com/Mays-M/Images-/blob/main/path1.png)
+   
+8. Proceed to https://gchq.github.io/CyberChef/ and input the data
 extracted from http://challenger.vle.fi/wp-json/wp/v2/pages/13,
 decoding it using the base64 algorithm.
-8. Flag successfully found: flag{7pzcgyRF9r8wZJp}
+9. Flag successfully found: flag{7pzcgyRF9r8wZJp}
+
 ![Flag 4 ](https://github.com/Mays-M/Images-/blob/main/flag4.png)
 
 # CH05
