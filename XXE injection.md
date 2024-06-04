@@ -49,7 +49,8 @@ below.
 3. On the left corner of website navigate to Profile>upload products from XML file
 4. Upload a product as a default.
 5. Now on the brup suite to locate a post request succussed 200 and was send to /product/upload
-6. Send the request to the repeater with xml and send post
+6. Send the request to the repeater with xml and send post.
+   ![XML](../Images/blob/main/XML.png)
 7. On the website, Now we can locate the new added product with the injected xxe
 
 
