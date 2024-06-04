@@ -28,43 +28,61 @@ information and got the score.
 
 ---------------------------------------------------------------------------------------------------------------------
 
-### Main target – Insert of Sensitive Information into Log File
-**Title:** Find sensitive information from the Django logs and login with easily guessable credentials
-according to log.
+### Main target – Coupon codes stored in plain text.
 
-**Description:** Log files are essential components of a system or application, and they serve several
-important purposes, each with its own impact.
+**Title:** Find and locate a sensitives information containing upcoming coupon codes. 
+
+**Description:** Find and locate a sensitives information containing upcoming coupon codes. 
 
 **Steps to produce:**
 
-1. Navigate to http://wasdat.fi.
-2. On the console :
-• Ssh wasdat.fi@x.x.x.x: ssh connection the docker.
-• Docker ps: list all the containers and identified our target container.
-• Docker exec -it 7bc2b13497bb /bin/bash: login to the Django container.
-3. By default, if want to find the log files, you can find the filename parameter in handlers of
-the file ‘settings.py’
-4. From the log error file, I assumed if the user tried to login with username: John to John5
-and stopped so maybe if I tried John6 I can successfully login while I have the correct
-
-password. ![LogFile](https://github.com/Mays-M/Images-/blob/main/logFile.png)
-
-
-6. Successfully guessed information from the extracted log and login with John6: john88
-   
-FLAG{was_1_2_3_5_taken} ![Flag](https://github.com/Mays-M/Images-/blob/main/flag.png)
-
+1. Navigate to https://wasdat.fi.
+2. Navigate to the Robots.txt of the wbiste.
+    http://Wasdat.fi/robots.txt
+3. Inside the robots.txt file there are many disallowed linked which need to look and check .
+4. When viewing the URLs found wasdat.fi/private includes two links.
+5. Visit the link for codes.txt which may include some information about the code, the text file included the coupon flag.
+Coupon codes for staff only!
+50% off: Flag{f3014f855}
 
 
 **Impact estimation:**
-– Medium Severity: logs files can be a tool to the attackers to use to find sensitive
-information about the application or user credential information.
+– High Severity: User/robot can identify restricted or confidential information on the site and disallow list can serve as a map to the first place to look.
 
 
-**Mitigation:** by implementing a security measure such encryption and permissions, you can help
-protect log files from hacking attempts and maintain the integrity and confidentiality of
-log data. It's important to regularly assess and update your log file security practices to
-adapt to evolving threats and vulnerabilities.
+**Mitigation:** Ensure it is correctly configuring, understand the purpose of using robots.txt with your site, create user-agent and test the configuration. 
 
-**Visit: ** https://stackoverflow.com/questions/19256919/location-of-django-logs-and-errors
+---------------------------------------------------------------------------------------------------------------------
+
+### Main target-Login intra 
+
+**Title:** Find and locate intra with a password stored on the target. 
+
+**Description:** In this task we try to digging deeply for further information we can get from the robots.txt to find a credential information like password to login to intra page
+
+**Steps to produce:**
+
+1. Navigate to https://wasdat.fi.
+2. Navigate to the Robots.txt of the website.
+    http://Wasdat.fi/robots.txt
+3. Inside the robots.txt file there are many disallowed linked which need to visit and check.
+4. When viewing the URLs found:
+   wasdat.fi/intra: is the intra login page
+   wasdat.fi/private : includes two links one of them may have a hidden password in a txt.
+   
+6. When clicked on intra-password.conf which may include some credential information as the name describes, the file shows an Error and the page only allowed for .txt files.
+7. To open a hidden txt files in the page we add %2500.txt so,
+   Wasdat.fi/intra-password.conf%2500.txt.
+8. The txt file includes (IntRa-P@sSW0rd-xyz) a sensitive information which we can use later
+to login to intra page as a password
+9. IntRa-P@sSW0rd-xyz used as a password to login to wasdat.fi/intra and the show a flag which navigate to finish our task.
+
+   Flag{0273f19d48e13292c5e216e04ca339ea
+
+
+**Impact estimation:**
+– high Severity:Users enable to find a sensitive information about the credential of the page
+
+
+**Mitigation:** – Understand the use of robots.txt and review the information and the configuration of the website. 
 
