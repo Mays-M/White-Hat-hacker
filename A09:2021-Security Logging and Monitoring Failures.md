@@ -43,7 +43,7 @@ important purposes, each with its own impact.
 
 1. Navigate to http://wasdat.fi.
 2. On the console :
-• Ssh wasdat.fi@192.168.1.101: ssh connection the docker.
+• Ssh wasdat.fi@x.x.x.x: ssh connection the docker.
 • Docker ps: list all the containers and identified our target container.
 • Docker exec -it 7bc2b13497bb /bin/bash: login to the Django container.
 3. By default, if want to find the log files, you can find the filename parameter in handlers of
