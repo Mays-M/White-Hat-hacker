@@ -41,7 +41,7 @@ application, putting its security in jeopardy and endangering sensitive data.
 **Steps to produce:**
 1. Navigate to http://wasdat.fi/api/import.
 2. Test it by send “data=c2xlcCAxMAo=” to get 500 Internal Server Error  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
-3. Create reverse shell using Pickle Deserialization in python.![Pickle](https://github.com/Mays-M/Images-/blob/main/pickle.png)
+3. Create reverse shell using Pickle Deserialization in python.
 4. Run the script to print pickled data.
 5.  Send Post request to Api/import with the data value.![POST](https://github.com/Mays-M/Images-/blob/main/POST.png)
 6.  Run netcat (nc) utility. It is a command used for network communication and
