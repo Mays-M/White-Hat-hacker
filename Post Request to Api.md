@@ -48,6 +48,8 @@ application, putting its security in jeopardy and endangering sensitive data.
 is commonly used to create a listening socket on a specific port for various purposes,
 including network debugging and data transfer.
 ![netcat](https://github.com/Mays-M/Images-/blob/main/netcat.png)
+
+
 **Impact estimation:** Medium SeverityAttacker can access to the server and read data shouldn’t be visible
 to the user.
 
