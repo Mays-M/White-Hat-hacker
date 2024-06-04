@@ -23,10 +23,8 @@ From this digging in the source code, I found some interesting information with 
 email and password:
 
 <code style="color : ligthskyblue">
-
 ngOnInit() {
  var e = this;
-
 this.userService.oauthLogin(this.parseRedirectUrlParams().access_token).subscribe(
  n => {
  const i = btoa(n.email.split('').reverse().join(''));
