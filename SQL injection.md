@@ -37,11 +37,23 @@ this.userService.oauthLogin(this.parseRedirectUrlParams().access_token).subscrib
  }, () => this.login(n))
  },</code>
 
-**Impact estimation:** High Severity: If no validation is applied, a malicious user could create a hyperlink
-to redirect your users to an unvalidated malicious website.
+From the code above seems the password is a function decoded by btoa function(
+method encodes a string in base-64) used the email as a base to the password
+function
 
-**Mitigation:** Avoid using redirects URL and if you used don’t allow the user input for destination,
-user should add his name as possible to prevent attack tampering with URL.
+8. On the Console:
+window. btoa("bjoern.kimminich@gmail.com".split("").reverse().join(""))
+to get the encoded password base64
+"bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI="
+
+10. To check. login with the Email and password for a successfully login.
+Email: bjoern.kimminich@gmail.com
+Password: bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=
+
+
+**Impact estimation:** High Severity. User can access a sensitive information and have their credential information.
+
+**Mitigation:** Understand OAuth and implement OAuth provider or use third-party OAuth provider
 
 
 ## Remote Code Execution (RCE)
