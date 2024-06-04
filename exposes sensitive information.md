@@ -30,9 +30,11 @@ validation to user.
 **Mitigation:**
 – Avoid letting user access to use metrics, the link should be less generic and not
 default with restricting access list of IPs.
+
+
 ---------------------------------------------------------------------------------------------------------------------
 
-## Main target – Insert of Sensitive Information into Log File
+### Main target – Insert of Sensitive Information into Log File
 **Title:** Find sensitive information from the Django logs and login with easily guessable credentials
 according to log.
 
