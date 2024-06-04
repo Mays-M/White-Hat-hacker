@@ -36,29 +36,28 @@ below.
 
 ---------------------------------------------------------------------------------------------------------------------
 
-### Main target – Coupon codes stored in plain text.
+### Main target – XML External Entity
 
-**Title:** Find and locate a sensitives information containing upcoming coupon codes. 
+**Title:** : Perform XXE attack successfully using product/upload functionality in Wasdat. 
 
-**Description:** Find and locate a sensitives information containing upcoming coupon codes. 
+**Description:** : The attacker abuses the target application by include external entities in its XML parsing. Many web applications use XML to store and transmit data. When an application parses XML input, it may include references to external entities within the XML document.our endpoint /product/upload
 
 **Steps to produce:**
 
-1. Navigate to https://wasdat.fi.
-2. Navigate to the Robots.txt of the wbiste.
-    http://Wasdat.fi/robots.txt
-3. Inside the robots.txt file there are many disallowed linked which need to look and check .
-4. When viewing the URLs found wasdat.fi/private includes two links.
-5. Visit the link for codes.txt which may include some information about the code, the text file included the coupon flag.
-Coupon codes for staff only!
-50% off: Flag{f3014f855}
+1. Navigate to http://wasdat.fi by Brup suite as a target
+2. Login / create account if not have
+3. On the left corner of website navigate to Profile>upload products from XML file
+4. Upload a product as a default.
+5. Now on the brup suite to locate a post request succussed 200 and was send to /product/upload
+6. Send the request to the repeater with xml and send post
+7. On the website, Now we can locate the new added product with the injected xxe
 
 
 **Impact estimation:**
-– High Severity: User/robot can identify restricted or confidential information on the site and disallow list can serve as a map to the first place to look.
+– Medium Severity. Receiving a response as a part XML external entity attack can have a several significant impact in data disclosure and security risk
 
 
-**Mitigation:** Ensure it is correctly configuring, understand the purpose of using robots.txt with your site, create user-agent and test the configuration. 
+**Mitigation:** use validate and sanitize user-supplied XML input before processing, configure XML to disable External Entities and use content security policy
 
 
 
