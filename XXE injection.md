@@ -14,7 +14,7 @@
 2. Edit oldwasdat-exampe.xml- MALICIOUS XML document and include an external entity declaration pointing to a resource that want to access, in this case want to access
 
   ‘/etc/passwd’ on the server. As in the example below :
-$${\color{red}Red}$$[<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><search>&xxe;</search>]
+<code><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><search>&xxe;</search> </code>
    
 **Impact estimation:**
 – Low Severity: User/robot can identify restricted or confidential information on thesite and disallow list can serve as a map to the first place to look.
@@ -48,37 +48,5 @@ Coupon codes for staff only!
 
 **Mitigation:** Ensure it is correctly configuring, understand the purpose of using robots.txt with your site, create user-agent and test the configuration. 
 
----------------------------------------------------------------------------------------------------------------------
 
-### Main target-Login intra 
-
-**Title:** Find and locate intra with a password stored on the target. 
-
-**Description:** In this task we try to digging deeply for further information we can get from the robots.txt to find a credential information like password to login to intra page
-
-**Steps to produce:**
-
-1. Navigate to https://wasdat.fi.
-2. Navigate to the Robots.txt of the website.
-    http://Wasdat.fi/robots.txt
-3. Inside the robots.txt file there are many disallowed linked which need to visit and check.
-4. When viewing the URLs found:
-   wasdat.fi/intra: is the intra login page
-   wasdat.fi/private : includes two links one of them may have a hidden password in a txt.
-   
-6. When clicked on intra-password.conf which may include some credential information as the name describes, the file shows an Error and the page only allowed for .txt files.
-7. To open a hidden txt files in the page we add %2500.txt so,
-   Wasdat.fi/intra-password.conf%2500.txt.
-8. The txt file includes (IntRa-P@sSW0rd-xyz) a sensitive information which we can use later
-to login to intra page as a password
-9. IntRa-P@sSW0rd-xyz used as a password to login to wasdat.fi/intra and the show a flag which navigate to finish our task.
-
-   Flag{0273f19d48e13292c5e216e04ca339ea
-
-
-**Impact estimation:**
-– high Severity:Users enable to find a sensitive information about the credential of the page
-
-
-**Mitigation:** – Understand the use of robots.txt and review the information and the configuration of the website. 
 
