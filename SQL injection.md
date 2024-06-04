@@ -55,34 +55,40 @@ Password: bW9jLmxpYW1nQGhjaW5pbW1pay5ucmVvamI=
 
 **Mitigation:** Understand OAuth and implement OAuth provider or use third-party OAuth provider
 
+-------------------------------------------------------------------------------------------------------------
 
-## Remote Code Execution (RCE)
-### Main target – Deserialization of Untrusted Data
-**Title:** Establish reverse shell using pickle Deserialization.
+### Main target – Missing Authentication for critical function
 
-**Description:** An insecure deserialization attack has the capacity to inflict serious damage on your
-application, putting its security in jeopardy and endangering sensitive data.
+**Title:** : Delete product feature doesn’t require authentication.
+
+**Description:** Web Application has insecure direct object vulnerability. The attackers can delete a
+product from the website without an authorization.
 
 **Steps to produce:**
-1. Navigate to http://wasdat.fi/api/import.
-2. Test it by send “data=c2xlcCAxMAo=” to get 500 Internal Server Error  ![Testing](https://github.com/Mays-M/Images-/blob/main/test.png)
-3. Create reverse shell using Pickle Deserialization in python.
-4. Run the script to print pickled data.
-5.  Send Post request to Api/import with the data value.![POST](https://github.com/Mays-M/Images-/blob/main/POST.png)
-6.  Run netcat (nc) utility. It is a command used for network communication and
-is commonly used to create a listening socket on a specific port for various purposes,
-including network debugging and data transfer.
-![netcat](https://github.com/Mays-M/Images-/blob/main/netcat.png)
+1. Navigate to https://wasdat.fi.
+2. Login into the website.
+3. Navigate to one of the products to get their URL.
+4. On the console:
+  <code style="color : ligthskyblue">  url -X DELETE http://wasdat.fi/product/4 </code>
+6. Check with Wireshark that we got response as success 200 ok
+7. Also, can be checked the product deleted when navigate to https://wasdat.fi
 
 
-**Impact estimation:** Medium SeverityAttacker can access to the server and read data shouldn’t be visible
-to the user.
+**Impact estimation:** Medium Severity. User can delete a product from the page. Which a successful attack can result in unauthorized delete and update to the website.
 
-**Mitigation:** - Avoid using serialization, if you need to accept structured data from an HTTP request,
-XML or JSON are more common formats and less prone to malicious use
-- User-provided information, such as URL parameters, POST data, and cookies, should
-always be treated as potentially unsafe. It is important never to unpickle data
-originating from sources that are not authenticated or trusted.
 
-**Visit** https://blog.securelayer7.net/insecure-deserialization-attack-in-python-application/
+**Mitigation:** - : 
+
+- It’s essential to apply multiple layers of security.
+– Implement Web Application Firewall (WAF) to filter and monitor incoming traffic, blocking malicious requests.
+– Heep security headers
+– To implement a strong authentication and authorization, so only authorized users have the access.
+– Implement rate limit to restricts the number of requests.
+– Validate and sanitize user input on the client and the server sides.
+– To prevent SQL injection attacks, use parameterized quires.
+– Encrypted data.
+– Security headers. To mitigated XSS.
+– Implement CORS Policies.
+
+**Visit** [https://blog.securelayer7.net/insecure-deserialization-attack-in-python-application/](https://www.rfc-editor.org/rfc/rfc2616.txt)
    
