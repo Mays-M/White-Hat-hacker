@@ -7,29 +7,29 @@
    
 <p>Software and Tools: </p>
 
-Burp Suite, 
+- Burp Suite, 
 
-Wireshark, 
+- Wireshark, 
 
-Nmap (Network Mapper), 
+- Nmap (Network Mapper), 
 
-Nessus, 
+- Nessus, 
 
-Nikto, 
+- Nikto, 
 
-Kismet, 
+- Kismet, 
 
-NetStumbler, 
+- NetStumbler, 
 
-Acunetix, 
+- Acunetix, 
 
-Netsparker, 
+- Netsparker, 
 
-Intruder, 
+- Intruder, 
 
-Metasploit, 
+- Metasploit, 
 
-and Aircrack-Ng
+- and Aircrack-Ng
 
 <p>We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.</p>
 
