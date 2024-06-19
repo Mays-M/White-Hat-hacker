@@ -5,9 +5,9 @@
 
 <h3> Setting Up Your Environment </h3>
    
-Software: Burp Suite, Wireshark
+<p>Software</p>: Burp Suite, Wireshark
 
-Tools: Nmap (Network Mapper), Nessus, Nikto, Kismet, NetStumbler, Acunetix, Netsparker, Intruder, Metasploit, and Aircrack-Ng
+<p>Tools</p>: Nmap (Network Mapper), Nessus, Nikto, Kismet, NetStumbler, Acunetix, Netsparker, Intruder, Metasploit, and Aircrack-Ng
 
 We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.
 
