@@ -30,9 +30,9 @@
 
 <br><br>
 
-</h3>Disclaimer:</h3>
+</h3>Disclaimer :</h3>
 
-This repository is intended for educational purposes only. The information contained herein should be used responsibly and ethically. Unauthorized hacking and exploitation of systems without permission is illegal and punishable by law.
+<p>This repository is intended for educational purposes only. The information contained herein should be used responsibly and ethically. Unauthorized hacking and exploitation of systems without permission is illegal and punishable by law.</p>p>
 
 Happy Hacking!
 
