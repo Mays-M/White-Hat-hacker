@@ -7,27 +7,25 @@
    
 <p>Software and Tools: </p>
 
-- Burp Suite, 
+- Burp Suite: https://portswigger.net/burp/documentation/desktop/getting-started/download-and-install
 
-- Wireshark, 
+- Wireshark: https://www.wireshark.org/download.html 
 
-- Nmap (Network Mapper), 
+- Nmap (Network Mapper): https://nmap.org/
 
-- Nessus, 
+- Nessus: https://www.tenable.com/products/nessus
 
-- Nikto, 
+- Nikto: https://github.com/sullo/nikto
 
-- Kismet, 
+- Kismet: https://www.kali.org/tools/kismet/
 
 - NetStumbler, 
 
 - Acunetix, 
 
-- Netsparker, 
+- Intruder: https://www.intruder.io/
 
-- Intruder, 
-
-- Metasploit, 
+- Metasploit: https://www.metasploit.com/
 
 - and Aircrack-Ng
 
