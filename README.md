@@ -19,15 +19,13 @@
 
 - Kismet: https://www.kali.org/tools/kismet/
 
-- NetStumbler, 
-
-- Acunetix, 
+- Acunetix: https://www.acunetix.com/
 
 - Intruder: https://www.intruder.io/
 
 - Metasploit: https://www.metasploit.com/
 
-- and Aircrack-Ng
+- Aircrack-Ng: https://www.kali.org/tools/aircrack-ng/
 
 <p>We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.</p>
 
