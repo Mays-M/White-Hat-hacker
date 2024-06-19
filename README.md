@@ -28,8 +28,7 @@
 - Aircrack-Ng: https://www.kali.org/tools/aircrack-ng/
 
 
-<br><br>
-
+<br>
 <p>Disclaimer: This repository is intended for educational purposes only. The information contained herein should be used responsibly and ethically. Unauthorized hacking and exploitation of systems without permission is illegal and punishable by law.</p>
 
 Happy Hacking!
