@@ -30,8 +30,6 @@
 
 <br><br>
 
-<p>We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.</p>
-
 </h3>Disclaimer</h3>
 This repository is intended for educational purposes only. The information contained herein should be used responsibly and ethically. Unauthorized hacking and exploitation of systems without permission is illegal and punishable by law.
 
