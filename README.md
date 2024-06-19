@@ -7,21 +7,32 @@
    
 <p>Software and Tools: </p>
 Burp Suite, 
+
 Wireshark, 
+
 Nmap (Network Mapper), 
+
 Nessus, 
+
 Nikto, 
+
 Kismet, 
+
 NetStumbler, 
+
 Acunetix, 
+
 Netsparker, 
+
 Intruder, 
+
 Metasploit, 
+
 and Aircrack-Ng
 
-We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.
+<p>We welcome contributions from the community! If you have a document or tutorial to share, please follow our contribution guidelines.</p>
 
-Disclaimer
+</h3>Disclaimer</h3>
 This repository is intended for educational purposes only. The information contained herein should be used responsibly and ethically. Unauthorized hacking and exploitation of systems without permission is illegal and punishable by law.
 
 Happy Hacking!
